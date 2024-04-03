@@ -34,7 +34,7 @@ struct OfferCodeDetails
 		discountPercentageOffered = offerCodeDiscountMap[offerCodeName];
 	}
 
-	static std::unordered_set<std::string> offerCodeNamesSet;// = { "OFR001", "OFR002", "OFR003" };
+	static std::unordered_set<std::string> offerCodeNamesSet;
 
 	private:
 		std::unordered_map<std::string, Range> offerCodeDistanceRangeMap = {

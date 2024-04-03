@@ -12,7 +12,7 @@ int main()
 		const std::tuple<const float, const float> result = CostCalculator::SharedInstance()->CalculateCost(packages[i], inputHandler.GetBaseDeliveryCost());
 		const float totalCost		= std::get<0>(result);
 		const float discountOffered = std::get<1>(result);
-		std::cout << packages[i].GetOfferCode().GetOfferCodeDetail().offerCode << " " << discountOffered << " " << totalCost << std::endl;
+		std::cout << packages[i].GetPackageID() << "  " << discountOffered << "  " << totalCost << std::endl;
 	}
 	return 0;
 }
