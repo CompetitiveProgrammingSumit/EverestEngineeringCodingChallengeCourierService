@@ -138,6 +138,7 @@
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="OfferCodeDetails.h" />
     <ClInclude Include="OfferCodes.h" />
+    <ClInclude Include="OptionalPackage.h" />
     <ClInclude Include="Package.h" />
     <ClInclude Include="Range.h" />
   </ItemGroup>

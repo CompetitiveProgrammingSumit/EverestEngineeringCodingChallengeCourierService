@@ -50,5 +50,8 @@
     <ClInclude Include="OfferCodeDetails.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OptionalPackage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
