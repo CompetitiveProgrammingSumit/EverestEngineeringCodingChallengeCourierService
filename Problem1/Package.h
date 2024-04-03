@@ -10,9 +10,9 @@ class Package
 		bool IsValidPackage(int id);
 
 		inline const std::string& GetPackageID() const { return m_PackageID; }
-		inline const int& GetPackageWeight() const { return m_PackageWeightInKG; }
-		inline const int& GetPackageDistance() const { return m_DistanceInKM; }
-		inline const OfferCodes& GetOfferCode() const { return m_OfferCode; }
+		inline const int& GetPackageWeight()	 const { return m_PackageWeightInKG; }
+		inline const int& GetPackageDistance()	 const { return m_DistanceInKM; }
+		inline const OfferCodes& GetOfferCode()	 const { return m_OfferCode; }
 
 	private:
 		std::string m_PackageID;

@@ -33,7 +33,7 @@ class OfferCodes
 
 			OfferCodeDetails(const std::string& offerCodeName, const Range& distRange, const Range& wtRange, const int& discountOffered) : offerCode(offerCodeName), distanceRange(distRange), weightRange(wtRange), discountPercentageOffered(discountOffered) {}
 		};
-		std::string			   m_OfferCode;
+		std::string		  m_OfferCode;
 		const OfferCodeDetails m_AvailableOffers[3] = {
 				OfferCodeDetails("OFR001", Range(0, 200),  Range(70, 200), 10),
 				OfferCodeDetails("OFR002", Range(50, 150), Range(100, 250), 7),

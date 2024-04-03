@@ -4,7 +4,7 @@ bool OfferCodes::IsValidOffer()
 {
 	for (int i = 0; i < 3; i++)
 	{
-		if (m_ValidOfferCodes[i] == m_OfferCode) { return true; }
+		if (m_AvailableOffers[i].offerCode == m_OfferCode) { return true; }
 	}
 	return false;
 }
