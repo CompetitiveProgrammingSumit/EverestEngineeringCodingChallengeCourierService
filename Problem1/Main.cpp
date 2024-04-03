@@ -4,7 +4,7 @@
 int main()
 {
 	InputHandler inputHandler;
-	const std::vector<Package> packages = inputHandler.GetPackages();
+	std::vector<Package> packages = inputHandler.GetPackages();
 	
 	for (int i = 0; i < inputHandler.GetNumberOfPackages(); i++)
 	{

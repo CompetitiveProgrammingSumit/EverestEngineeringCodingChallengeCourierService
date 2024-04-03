@@ -11,8 +11,9 @@ CostCalculator* CostCalculator::SharedInstance()
 	return _CostCalulatorInstance;
 }
 
-int CostCalculator::CalculateCost(const Package& package, const int& baseDeliveryCost)
+int CostCalculator::CalculateCost(Package& package, const int& baseDeliveryCost)
 {
 	int totalCostIncurred = baseDeliveryCost + (package.GetPackageWeight() * 10) + (package.GetPackageDistance() * 5);
+	const OfferCodeDetails offerCodeDetail = package.GetOfferCode().GetOfferCodeDetail();
 	return totalCostIncurred;
 }

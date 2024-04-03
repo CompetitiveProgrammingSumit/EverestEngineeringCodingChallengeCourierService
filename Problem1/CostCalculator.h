@@ -12,5 +12,5 @@ class CostCalculator
 		CostCalculator(const CostCalculator& costCalculatorObject) = delete;
 		static CostCalculator* SharedInstance();
 
-		int CalculateCost(const Package& package, const int& baseDeliveryCost);
+		int CalculateCost(Package& package, const int& baseDeliveryCost);
 };
