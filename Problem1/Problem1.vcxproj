@@ -136,8 +136,10 @@
   <ItemGroup>
     <ClInclude Include="CostCalculator.h" />
     <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="OfferCodeDetails.h" />
     <ClInclude Include="OfferCodes.h" />
     <ClInclude Include="Package.h" />
+    <ClInclude Include="Range.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
