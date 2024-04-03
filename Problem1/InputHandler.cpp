@@ -33,17 +33,7 @@ void InputHandler::ParseData()
 		int packageWeight   = std::atoi(dataArray[i][1].c_str());
 		int packageDistance = std::atoi(dataArray[i][2].c_str());
 		Package newPackage(dataArray[i][0], packageWeight, packageDistance, dataArray[i][3]);
-		if (newPackage.IsValidPackage(i + 1))
-		{
-			m_ValidPackages.push_back(newPackage);
-		}
-		else
-		{
-			m_ValidPackages.clear();
-			break;
-			//TODO: - Handle Error in case of invalid Input.
-			//Call Lambda which is implemented in Main
-		}
+		m_ValidPackages.push_back(newPackage.IsValidPackage(i + 1) ? OptionalPackage(newPackage) : OptionalPackage());
 	}
 }
 
