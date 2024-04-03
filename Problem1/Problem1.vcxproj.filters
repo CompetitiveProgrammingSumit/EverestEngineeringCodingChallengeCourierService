@@ -44,5 +44,11 @@
     <ClInclude Include="CostCalculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Range.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OfferCodeDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
