@@ -39,6 +39,8 @@ void InputHandler::ParseData()
 		}
 		else
 		{
+			m_ValidPackages.clear();
+			break;
 			//TODO: - Handle Error in case of invalid Input.
 			//Call Lambda which is implemented in Main
 		}

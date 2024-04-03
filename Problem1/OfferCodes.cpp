@@ -2,9 +2,6 @@
 
 bool OfferCodes::IsValidOffer()
 {
-	for (int i = 0; i < 3; i++)
-	{
-		if (m_ValidOfferCodes[i] == m_OfferCode) { return true; }
-	}
+	if (m_OfferCodeNamesSet.find(m_OfferCodeName) != m_OfferCodeNamesSet.end()) { return true; }
 	return false;
 }

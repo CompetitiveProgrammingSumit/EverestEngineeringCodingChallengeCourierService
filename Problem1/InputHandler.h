@@ -9,6 +9,10 @@ class InputHandler
 	public:
 		InputHandler();
 
+		inline const std::vector<Package> GetPackages() const { return m_ValidPackages;	   }
+		inline const int& GetBaseDeliveryCost()			const { return m_BaseDeliveryCost; }
+		inline const int& GetNumberOfPackages()			const { return m_NumberOfPackages; }
+
 	private:
 		int						 m_BaseDeliveryCost;
 		int						 m_NumberOfPackages;
