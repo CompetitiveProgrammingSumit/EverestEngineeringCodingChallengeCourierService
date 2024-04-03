@@ -2,6 +2,6 @@
 
 bool OfferCodes::IsValidOffer()
 {
-	if (m_AvailableOffersMap.find(m_OfferCode) != m_AvailableOffersMap.end()) { return true; }
+	if (m_OfferCodeNamesSet.find(m_OfferCodeName) != m_OfferCodeNamesSet.end()) { return true; }
 	return false;
 }

@@ -11,9 +11,21 @@ CostCalculator* CostCalculator::SharedInstance()
 	return _CostCalulatorInstance;
 }
 
-int CostCalculator::CalculateCost(Package& package, const int& baseDeliveryCost)
+const std::tuple<const float, const float> CostCalculator::CalculateCost(Package& package, const int& baseDeliveryCost)
 {
-	int totalCostIncurred = baseDeliveryCost + (package.GetPackageWeight() * 10) + (package.GetPackageDistance() * 5);
-	const OfferCodeDetails offerCodeDetail = package.GetOfferCode().GetOfferCodeDetail();
-	return totalCostIncurred;
+	float totalCostIncurred = baseDeliveryCost + (package.GetPackageWeight() * 10) + (package.GetPackageDistance() * 5);
+	const float discount = CalculateDiscount(package, totalCostIncurred);
+	return std::make_tuple(totalCostIncurred - discount, discount);
+}
+
+const float CostCalculator::CalculateDiscount(const Package& package, const float& totalCost)
+{
+	const OfferCodeDetails offerCodeDetails = package.GetOfferCode().GetOfferCodeDetail();
+	const int packageDistance				= package.GetPackageDistance();
+	const int packageWeight					= package.GetPackageWeight();
+	if (offerCodeDetails.distanceRange.IsInRange(packageDistance) && offerCodeDetails.weightRange.IsInRange(packageWeight))
+	{
+		return (offerCodeDetails.discountPercentageOffered * 0.01 * totalCost);
+	}
+	return 0;
 }
