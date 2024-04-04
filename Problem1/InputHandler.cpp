@@ -30,6 +30,7 @@ void InputHandler::ParseData()
 	
 	for (int i = 0; i < m_NumberOfPackages; i++)
 	{
+		if (dataArray[i].size() != 4) { m_ValidPackages.push_back(OptionalPackage()); continue; }
 		int packageWeight   = std::atoi(dataArray[i][1].c_str());
 		int packageDistance = std::atoi(dataArray[i][2].c_str());
 		Package newPackage(dataArray[i][0], packageWeight, packageDistance, dataArray[i][3]);
