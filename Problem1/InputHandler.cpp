@@ -31,8 +31,8 @@ void InputHandler::ParseData()
 	for (int i = 0; i < m_NumberOfPackages; i++)
 	{
 		if (dataArray[i].size() != 4) { m_ValidPackages.push_back(OptionalPackage()); continue; }
-		int packageWeight   = std::atoi(dataArray[i][1].c_str());
-		int packageDistance = std::atoi(dataArray[i][2].c_str());
+		int packageWeight   = GetIntegerFromString(dataArray[i][1]); //std::atoi(dataArray[i][1].c_str());
+		int packageDistance = GetIntegerFromString(dataArray[i][2]); //std::atoi(dataArray[i][2].c_str());
 		Package newPackage(dataArray[i][0], packageWeight, packageDistance, dataArray[i][3]);
 		m_ValidPackages.push_back(newPackage.IsValidPackage(i + 1) ? OptionalPackage(newPackage) : OptionalPackage());
 	}
@@ -57,6 +57,18 @@ std::vector<std::string> InputHandler::SeperateData(const std::string& str, char
 	}
 	if (!newString.empty()) { result.push_back(newString); }
 	return result;
+}
+
+int InputHandler::GetIntegerFromString(const std::string& numberString)
+{
+	int number = 0;
+	int numberStringLength = (int)numberString.length();
+	for (int i = 0; i < numberStringLength; i++)
+	{
+		if (numberString[i] < '0' || numberString[i] > '9') { return -1; }
+		number = (number * 10) + (numberString[i] - '0');
+	}
+	return number;
 }
 
 void InputHandler::PrintInput(std::vector<std::string> singleInputArray)

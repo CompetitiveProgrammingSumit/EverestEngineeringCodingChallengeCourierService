@@ -22,5 +22,6 @@ class InputHandler
 
 		void ParseData();
 		std::vector<std::string> SeperateData(const std::string& str, char delimiter = ' ');
+		int GetIntegerFromString(const std::string& numberString);
 		void PrintInput(std::vector<std::string> singleInputArray);
 };

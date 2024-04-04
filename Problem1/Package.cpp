@@ -8,7 +8,7 @@ bool Package::IsValidPackage(int id)
 
 bool Package::IsValidPackageID(int id)
 {
-	if (m_PackageWeightInKG <= 0 || m_DistanceInKM <= 0) { return false; }
+	if (m_PackageWeightInKG < 0 || m_DistanceInKM < 0) { return false; }
 	int  packageIdLength = (int)m_PackageID.length();
 	char initials[3]	 = { 'P', 'K', 'G' };
 	int  idInInt		 = 0;
