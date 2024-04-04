@@ -1,4 +1,5 @@
-#include "../Common/InputHandler.h"
+//#include "../Common/InputHandler.h"
+#include "InputHandler.h"
 #include "CostCalculator.h"
 
 int main()
@@ -26,10 +27,7 @@ int main()
 
 /*
 100 3
-
 PKG1 5 5 OFR001
-
 PKG2 15 5 OFR004
-
 PKG3 10 100 OFR003
 */
