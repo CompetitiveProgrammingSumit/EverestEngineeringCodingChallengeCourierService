@@ -1,4 +1,3 @@
-//#include "../Common/InputHandler.h"
 #include "InputHandler.h"
 #include "CostCalculator.h"
 
