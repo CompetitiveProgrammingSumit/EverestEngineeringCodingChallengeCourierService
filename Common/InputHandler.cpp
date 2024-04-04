@@ -1,5 +1,7 @@
 #include "InputHandler.h"
 
+std::unordered_set<std::string> OfferCodeDetails::offerCodeNamesSet = { "OFR001", "OFR002", "OFR003" };
+
 InputHandler::InputHandler()
 {
 	m_shouldBePackageID = 0;

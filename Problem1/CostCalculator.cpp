@@ -13,7 +13,7 @@ CostCalculator* CostCalculator::SharedInstance()
 
 const std::tuple<const float, const float> CostCalculator::CalculateCost(Package& package, const int& baseDeliveryCost)
 {
-	float totalCostIncurred = baseDeliveryCost + (package.GetPackageWeight() * 10) + (package.GetPackageDistance() * 5);
+	float totalCostIncurred = (float)(baseDeliveryCost + (package.GetPackageWeight() * 10) + (package.GetPackageDistance() * 5));
 	const float discount = CalculateDiscount(package, totalCostIncurred);
 	return std::make_tuple(totalCostIncurred - discount, discount);
 }
@@ -25,7 +25,7 @@ const float CostCalculator::CalculateDiscount(const Package& package, const floa
 	const int packageWeight					= package.GetPackageWeight();
 	if (offerCodeDetails.distanceRange.IsInRange(packageDistance) && offerCodeDetails.weightRange.IsInRange(packageWeight))
 	{
-		return (offerCodeDetails.discountPercentageOffered * 0.01 * totalCost);
+		return (offerCodeDetails.discountPercentageOffered * 0.01f * totalCost);
 	}
 	return 0;
 }

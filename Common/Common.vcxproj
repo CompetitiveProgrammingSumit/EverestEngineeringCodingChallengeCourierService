@@ -21,13 +21,13 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ca4d586f-7f48-4cc8-ae24-2320a20dc9d9}</ProjectGuid>
-    <RootNamespace>Problem1</RootNamespace>
+    <ProjectGuid>{00fcac75-dc8d-42d6-95af-ded166ebf28d}</ProjectGuid>
+    <RootNamespace>Common</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -127,16 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CostCalculator.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="OfferCodes.cpp" />
+    <ClCompile Include="Package.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CostCalculator.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Common.vcxproj">
-      <Project>{00fcac75-dc8d-42d6-95af-ded166ebf28d}</Project>
-    </ProjectReference>
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="OfferCodeDetails.h" />
+    <ClInclude Include="OfferCodes.h" />
+    <ClInclude Include="OptionalPackage.h" />
+    <ClInclude Include="Package.h" />
+    <ClInclude Include="Range.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

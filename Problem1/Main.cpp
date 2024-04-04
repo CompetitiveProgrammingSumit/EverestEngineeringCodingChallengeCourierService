@@ -1,6 +1,5 @@
-#include "InputHandler.h"
+#include "../Common/InputHandler.h"
 #include "CostCalculator.h"
-std::unordered_set<std::string> OfferCodeDetails::offerCodeNamesSet = { "OFR001", "OFR002", "OFR003" };
 
 int main()
 {
