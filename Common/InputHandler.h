@@ -4,8 +4,6 @@
 #include <vector>
 #include "OptionalPackage.h"
 
-//std::unordered_set<std::string> OfferCodeDetails::offerCodeNamesSet = { "OFR001", "OFR002", "OFR003" };
-
 class InputHandler
 {
 	public:
