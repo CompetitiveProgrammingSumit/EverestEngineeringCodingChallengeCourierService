@@ -1,7 +1,8 @@
-#include <iostream>
+#include "InputHandler.h"
 
 int main()
 {
-	std::cout << "Project 2" << std::endl;
+	InputHandler				 inputHandler;
+	std::vector<OptionalPackage> packages = inputHandler.GetPackages();
 	return 0;
 }
