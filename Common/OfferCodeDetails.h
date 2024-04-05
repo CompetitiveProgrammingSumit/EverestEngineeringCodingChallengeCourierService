@@ -13,10 +13,18 @@ struct OfferCodeDetails
 
 	OfferCodeDetails(const std::string& offerCodeName)
 	{
-		offerCode = offerCodeName;
-		distanceRange = offerCodeDistanceRangeMap[offerCodeName];
-		weightRange = offerCodeWeightRangeMap[offerCodeName];
+		offerCode				  = offerCodeName;
+		distanceRange			  = offerCodeDistanceRangeMap[offerCodeName];
+		weightRange				  = offerCodeWeightRangeMap[offerCodeName];
 		discountPercentageOffered = offerCodeDiscountMap[offerCodeName];
+	}
+
+	OfferCodeDetails()
+	{
+		offerCode				  = "NA";
+		distanceRange			  = Range(0, 0);
+		weightRange				  = Range(0, 0);
+		discountPercentageOffered = 0;
 	}
 
 	static std::unordered_set<std::string> offerCodeNamesSet;

@@ -2,8 +2,9 @@
 
 bool Package::IsValidPackage(int id)
 {
-	if (m_OfferCode.IsValidOffer() && IsValidPackageID(id)) { return true; }
-	return false;
+	return IsValidPackageID(id);
+	/*if (m_OfferCode.IsValidOffer() && IsValidPackageID(id)) { return true; }
+	return false;*/
 }
 
 bool Package::IsValidPackageID(int id)
