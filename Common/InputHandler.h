@@ -13,7 +13,7 @@ class InputHandler
 		inline const int& GetBaseDeliveryCost()	const				  { return m_BaseDeliveryCost; }
 		inline const int& GetNumberOfPackages()	const				  { return m_NumberOfPackages; }
 
-	private:
+	protected:
 		int							 m_BaseDeliveryCost;
 		int							 m_NumberOfPackages;
 		std::vector<std::string>	 m_PackagesDataArray;

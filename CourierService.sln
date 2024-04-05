@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Problem1", "Problem1\Problem1.vcxproj", "{CA4D586F-7F48-4CC8-AE24-2320A20DC9D9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Problem2", "Problem2\Problem2.vcxproj", "{A6AEA7A9-E8B8-42F4-8B75-1E86DEE3BFDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{00FCAC75-DC8D-42D6-95AF-DED166EBF28D} = {00FCAC75-DC8D-42D6-95AF-DED166EBF28D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcxproj", "{00FCAC75-DC8D-42D6-95AF-DED166EBF28D}"
 EndProject
