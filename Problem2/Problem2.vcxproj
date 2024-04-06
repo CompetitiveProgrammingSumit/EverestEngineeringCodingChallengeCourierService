@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EstimatedDeliveryTimeCalculator.cpp" />
     <ClCompile Include="InputHandlerProblem2.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EstimatedDeliveryTimeCalculator.h" />
     <ClInclude Include="InputHandlerProblem2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

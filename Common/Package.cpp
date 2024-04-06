@@ -7,6 +7,21 @@ bool Package::IsValidPackage(int id)
 	return false;*/
 }
 
+void Package::SetTotalCost(float totalCost)
+{
+	m_TotalCost = totalCost;
+}
+
+void Package::SetDiscountOffered(float discountOffered)
+{
+	m_DiscountOffered = discountOffered;
+}
+
+void Package::SetEstimatedDeliveryTimeInHours(float deliveryTime)
+{
+	m_estimatedDeliveryTimeInHours = deliveryTime;
+}
+
 bool Package::IsValidPackageID(int id)
 {
 	if (m_PackageWeightInKG < 0 || m_DistanceInKM < 0) { return false; }
