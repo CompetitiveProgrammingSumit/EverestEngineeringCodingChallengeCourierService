@@ -1,7 +1,6 @@
-#include <algorithm>
 #include "InputHandlerProblem2.h"
 #include "CostCalculator.h"
-
+#include "EstimatedDeliveryTimeCalculator.h"
 
 void Print(std::vector<OptionalPackage> packages)
 {
@@ -18,7 +17,7 @@ bool Compare(OptionalPackage first, OptionalPackage second)
 	{
 		return first.package.GetPackageDistance() < second.package.GetPackageDistance();
 	}
-	return first.package.GetPackageWeight() > second.package.GetPackageWeight();
+	return first.package.GetPackageWeight() < second.package.GetPackageWeight();
 }
 
 void Solution()
@@ -26,32 +25,29 @@ void Solution()
 	InputHandlerProblem2		 inputHandler;
 	std::vector<OptionalPackage> packages = inputHandler.GetPackages();
 
-	std::sort(packages.begin(), packages.end(), Compare);
-	Print(packages);
+	//std::sort(packages.begin(), packages.end(), Compare);
+	//Print(packages);
+	EstimatedDeliveryTimeCalculator estimatedDeliveryTimeCalculator(packages, inputHandler.GetNumberOfVehicles(), inputHandler.GetMaxSpeed(), inputHandler.GetMaxWeight(), inputHandler.GetNumberOfPackages());
 }
 
 int main()
 {
-	//Solution();
-	InputHandlerProblem2		 inputHandler;
+	Solution();
+	/*InputHandlerProblem2		 inputHandler;
 	std::vector<OptionalPackage> packages = inputHandler.GetPackages();
 
 	for (int i = 0; i < inputHandler.GetNumberOfPackages(); i++)
 	{
 		if (packages[i].isValidPackage)
 		{
-			const std::tuple<const float, const float> result = CostCalculator::SharedInstance()->CalculateCost(packages[i].package, inputHandler.GetBaseDeliveryCost());
-			const float totalCost	    = std::get<0>(result);
-			const float discountOffered = std::get<1>(result);
-			packages[i].package.SetTotalCost(totalCost);
-			packages[i].package.SetDiscountOffered(discountOffered);
+			CostCalculator::SharedInstance()->CalculateCost(packages[i].package, inputHandler.GetBaseDeliveryCost());
 			std::cout << packages[i].package.GetPackageID() << "  " << packages[i].package.GetDiscountOffered() << "  " << packages[i].package.GetTotalCost() << std::endl;
 		}
 		else
 		{
 			std::cout << "PKG" << i + 1 << " is Invalid." << std::endl;
 		}
-	}
+	}*/
 	return 0;
 }
 

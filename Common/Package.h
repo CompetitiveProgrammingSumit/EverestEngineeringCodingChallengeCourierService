@@ -12,6 +12,7 @@ class Package
 		void SetTotalCost(float totalCost);
 		void SetDiscountOffered(float discountOffered);
 		void SetEstimatedDeliveryTimeInHours(float deliveryTime);
+		void SetIsDelivered(bool isDelivered);
 
 		inline const std::string& GetPackageID()	   const { return m_PackageID; }
 		inline const int& GetPackageWeight()		   const { return m_PackageWeightInKG; }
@@ -20,6 +21,7 @@ class Package
 		inline const float& GetTotalCost()			   const { return m_TotalCost; }
 		inline const float& GetDiscountOffered()	   const { return m_DiscountOffered; }
 		inline const float& GetEstimatedDeliveryTime() const { return m_estimatedDeliveryTimeInHours; }
+		inline const bool& GetIsDelivered()			   const { return m_IsDelivered; }
 
 	private:
 		std::string m_PackageID;
@@ -30,6 +32,7 @@ class Package
 		float m_TotalCost;
 		float m_DiscountOffered;
 		float m_estimatedDeliveryTimeInHours;
+		bool  m_IsDelivered = false;
 
 		bool IsValidPackageID(int id);
 };

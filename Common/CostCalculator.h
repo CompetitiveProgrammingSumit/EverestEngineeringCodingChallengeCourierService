@@ -8,10 +8,10 @@ class CostCalculator
 
 		CostCalculator() {}
 
-		const float CalculateDiscount(const Package& package, const float& totalCost);
+		const float CalculateDiscount(Package& package, const float& totalCost);
 
 	public:
 		CostCalculator(const CostCalculator& costCalculatorObject) = delete;
 		static CostCalculator* SharedInstance();
-		const std::tuple<const float, const float> CalculateCost(Package& package, const int& baseDeliveryCost);
+		void CalculateCost(Package& package, const int& baseDeliveryCost);
 };

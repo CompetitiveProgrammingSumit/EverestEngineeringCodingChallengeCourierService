@@ -10,10 +10,8 @@ int main()
 	{
 		if(packages[i].isValidPackage)
 		{
-			const std::tuple<const float, const float> result = CostCalculator::SharedInstance()->CalculateCost(packages[i].package, inputHandler.GetBaseDeliveryCost());
-			const float totalCost = std::get<0>(result);
-			const float discountOffered = std::get<1>(result);
-			std::cout << packages[i].package.GetPackageID() << "  " << discountOffered << "  " << totalCost << std::endl;
+			CostCalculator::SharedInstance()->CalculateCost(packages[i].package, inputHandler.GetBaseDeliveryCost());
+			std::cout << packages[i].package.GetPackageID() << "  " << packages[i].package.GetDiscountOffered() << "  " << packages[i].package.GetTotalCost() << std::endl;
 		}
 		else
 		{

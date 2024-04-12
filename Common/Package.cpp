@@ -22,6 +22,11 @@ void Package::SetEstimatedDeliveryTimeInHours(float deliveryTime)
 	m_estimatedDeliveryTimeInHours = deliveryTime;
 }
 
+void Package::SetIsDelivered(bool isDelivered)
+{
+	m_IsDelivered = isDelivered;
+}
+
 bool Package::IsValidPackageID(int id)
 {
 	if (m_PackageWeightInKG < 0 || m_DistanceInKM < 0) { return false; }
